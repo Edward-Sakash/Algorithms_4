@@ -18,7 +18,7 @@ change the merge_sort so that you can sort by age."""
 
 # Solution
 
-def merge_sort(arr, key=None):
+def merge_sort(arr, key="age"):
     if len(arr) <= 1:
         return arr
 
@@ -67,17 +67,17 @@ dictionaries = [
     {"name": "Jack", "age": 33, "city": "Denver"}
 ]
 
-sorted_by_age = merge_sort(dictionaries, key="age")
+sorted_by_age = merge_sort(dictionaries)
 
 # Determine the maximum lengths for each column
-max_name_length = max(len(d["name"].strip()) for d in sorted_by_age)
+max_name_length = max(len(d["name"]) for d in sorted_by_age)
 max_age_length = max(len(str(d["age"])) for d in sorted_by_age)
 max_city_length = max(len(d["city"]) for d in sorted_by_age)
 
 # Print the sorted list in columns
 for d in sorted_by_age:
     print(f"{{:<{max_name_length}}} {{:<{max_age_length}}} {{:<{max_city_length}}}".format(
-        d["name"].strip(), d["age"], d["city"]
+        d["name"], d["age"], d["city"]
     ))
 
 

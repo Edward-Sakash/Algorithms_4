@@ -84,5 +84,5 @@ def main():
     print(f'is palindrome "{string3}" # {is_palindrome(string3)}')
 
 
-if __name__ == '__main__':
-    main()
+#if __name__ == '__main__':
+main()

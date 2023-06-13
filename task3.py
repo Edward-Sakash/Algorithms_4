@@ -86,3 +86,5 @@ output = merge_sort(dictionaries, key=lambda item: item['age'])
 print("\nmerge_sort(dictionaries, key=lambda item: item['age']):")
 for item in output:
     print(item)
+
+print(merge_sort([2,5,1,3,4])) #--->[1, 2, 3, 4, 5]
